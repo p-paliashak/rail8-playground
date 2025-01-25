@@ -1,0 +1,22 @@
+<h1 class="text-2xl font-bold mb-4"><%= action_name.capitalize %> Bank Account</h1>
+
+<%= form_with model: bank_account, class: 'space-y-4', data: { controller: 'form-handler', action: 'turbo:submit-end->form-handler#resetForm' } do |form| %>
+  <div>
+    <%= form.label :name, class: 'block font-semibold' %>
+    <%= form.text_field :name, class: "w-full p-2 border rounded #{'border-red-500' if bank_account.errors[:name].any?}" %>
+    <% if bank_account.errors[:name].any? %>
+      <p class="text-red-500 text-sm mt-1"><%= bank_account.errors[:name].join(', ') %></p>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :balance, class: 'block font-semibold' %>
+    <%= form.number_field :balance, class: "w-full p-2 border rounded #{'border-red-500' if bank_account.errors[:balance].any?}" %>
+    <% if bank_account.errors[:balance].any? %>
+      <p class="text-red-500 text-sm mt-1"><%= bank_account.errors[:balance].join(', ') %></p>
+    <% end %>
+  </div>
+
+  <%= form.submit 'Save', class: 'bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600' %>
+<% end %>
+
