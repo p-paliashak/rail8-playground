@@ -46,3 +46,6 @@ Layout/SpaceInsideArrayLiteralBrackets:
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
+
+Metrics/MethodLength:
+  Enabled: false

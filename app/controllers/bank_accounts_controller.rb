@@ -14,7 +14,7 @@ class BankAccountsController < ApplicationController
     if @bank_account.save
       respond_to do |format|
         format.turbo_stream
-        format.html { redirect_to bank_accounts_path, notice: "Bank account created successfully." }
+        format.html { redirect_to bank_accounts_path, flash: { success: "Bank account created successfully." } }
       end
     else
       render :new, status: :unprocessable_entity
