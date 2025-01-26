@@ -31,12 +31,13 @@ Layout/IndentationWidth:
 Style/Documentation:
   Enabled: false
 
+# Layout/IndentationConsistency:
+#   Enabled: true
+#   EnforcedStyle: indented_internal_methods
+
 Layout/IndentationConsistency:
   Enabled: true
-  EnforcedStyle: indented_internal_methods
-
-Style/IndentationConsistency:
-  AllowProtectedAndPrivateMethodsBeIndented: false
+  EnforcedStyle: normal
 
 Layout/SpaceInsideArrayLiteralBrackets:
   Enabled: true
