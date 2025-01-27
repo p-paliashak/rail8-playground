@@ -1,0 +1,9 @@
+{
+  "type": "rdbg",
+  "name": "Attach with rdbg",
+  "request": "attach",
+  "rdbgPath": "/usr/local/rvm/gems/default/gems/debug-1.10.0/exe/rdbg",
+  "debugPort": "tmp/sockets/rdbg.socket",
+  "localfs": true,
+  "autoAttach": "0.11783081712616916"
+}

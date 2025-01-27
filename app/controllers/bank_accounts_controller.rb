@@ -39,8 +39,11 @@ class BankAccountsController < ApplicationController
   def destroy
     @bank_account.destroy
     respond_to do |format|
-      format.turbo_stream
-      format.html { redirect_to bank_accounts_path, notice: "Bank account deleted successfully." }
+      message = "Bank account deleted successfully."
+      format.turbo_stream do
+        flash.now[:notice] = message
+      end
+      format.html { redirect_to bank_accounts_path, notice: message }
     end
   end
 

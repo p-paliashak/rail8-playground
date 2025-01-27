@@ -14,9 +14,9 @@
     },
     {
       "type": "rdbg",
-      "name": "Attach with rdbg",
+      "name": "Attach to rdbg Process",
       "request": "attach",
-      "debugPort": "1234"
-    }
+      "debugPort": "${workspaceRoot}/tmp/sockets/rdbg.socket",
+    },
   ]
 }

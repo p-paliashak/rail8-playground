@@ -24,7 +24,9 @@
   </head>
 
   <body>
-    <%= render "shared/flash_messages" %>
+    <turbo-frame id="flash-messages-container">
+      <%= render "shared/flash_messages" %>
+    </turbo-frame>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>

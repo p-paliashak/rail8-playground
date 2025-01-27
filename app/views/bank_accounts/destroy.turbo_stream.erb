@@ -1,1 +1,6 @@
 <turbo-stream action="remove" target="bank_account_<%= @bank_account.id %>"></turbo-stream>
+<turbo-stream action="update" target="flash-messages-container">
+  <template>
+    <%= render partial: "shared/flash_messages", formats: :html %>
+  </template>
+</turbo-stream>
