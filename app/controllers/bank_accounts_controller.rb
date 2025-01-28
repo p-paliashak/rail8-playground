@@ -5,6 +5,12 @@ class BankAccountsController < ApplicationController
 
   def index
     @bank_accounts = Current.user.bank_accounts
+    @bank_accounts = @bank_accounts.where("name like ?", params[:name]) if params[:name].present?
+
+    respond_to do |format|
+      format.html
+      format.turbo_stream
+    end
   end
 
   def new

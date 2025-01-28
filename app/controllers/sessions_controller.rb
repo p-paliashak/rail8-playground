@@ -8,7 +8,9 @@ class SessionsController < ApplicationController
 
   layout "session"
 
-  def new; end
+  def new
+    redirect_to root_path if authenticated?
+  end
 
   def create
     if (user = User.authenticate_by(params.permit(:email_address, :password)))
