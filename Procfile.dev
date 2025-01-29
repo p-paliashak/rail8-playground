@@ -1,2 +1,2 @@
-web: bundle exec rdbg --command --nonstop --open=vscode --sock_path=tmp/sockets/rdbg.socket -- bin/rails server
+web: bundle exec rdbg --command --nonstop --sock_path=tmp/sockets/rdbg.socket -- bin/rails server
 css: bin/rails tailwindcss:watch

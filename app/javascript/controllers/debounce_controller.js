@@ -13,4 +13,14 @@ export default class extends Controller {
       form.requestSubmit(); // Submit the form after the delay
     }, this.delayValue || 300); // Default delay is 300ms
   }
+
+  showSpinner() {
+    document.getElementById("loading-spinner").classList.remove("hidden");
+  }
+
+  hideSpinner() {
+    setTimeout(() => {
+      document.getElementById("loading-spinner").classList.add("hidden");
+    }, 500);
+  }
 }
